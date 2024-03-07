@@ -1,0 +1,575 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  background-size: cover;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-size: 16px;
+
+  /* color: #d58585;
+      /*display: flex;
+      justify-content: center;
+      align-items: center;*/
+}
+
+/*.inv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  */
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes fade-in-left {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#section1 .fadein {
+  font-size: 30px;
+  animation: fade-in-left 5s infinite alternate;
+}
+
+#section1 .sec1 {
+  display: flex;
+  text-align: center;
+}
+
+#section1 h2 {
+  color: #381919;
+  box-sizing: border-box;
+  margin-right: 4em;
+  padding-right: 5%;
+  padding-left: 3%;
+  padding-bottom: 5%;
+  font-size: 2rem;
+  display: block;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  line-height: 1.5em;
+}
+
+#section1 p {
+  text-align: justify;
+  margin-top: 2em;
+  color: black;
+  font-weight: bolder;
+  padding-right: 5%;
+  line-height: 2.25em;
+}
+
+#section1 .fadein {
+  animation: fade-in-left 5s infinite alternate;
+}
+
+#section2 .sec1 {
+  display: flex;
+  text-align: center;
+}
+
+#section2 h2 {
+  color: #381919;
+  box-sizing: border-box;
+  margin-right: 4em;
+  padding-right: 5%;
+  padding-left: 3%;
+  padding-bottom: 5%;
+  font-size: 2rem;
+  display: block;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  line-height: 1.5em;
+}
+
+#section2 p {
+  text-align: justify;
+  margin-top: 2em;
+  color: black;
+  font-weight: bolder;
+  padding-right: 5%;
+  line-height: 2.25em;
+}
+
+#section2 .fadein {
+  animation: fade-in-left 5s infinite alternate;
+}
+
+
+#section3 .sec1 {
+  display: flex;
+  text-align: center;
+}
+
+#section3 h2 {
+  color: #381919;
+  box-sizing: border-box;
+  margin-right: 4em;
+  padding-right: 2%;
+  padding-left: 3%;
+  padding-bottom: 5%;
+  font-size: 2rem;
+  display: block;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  line-height: 1.5em;
+  width: 36%;
+}
+
+#section3 p {
+  text-align: justify;
+  margin-top: 2em;
+  color: black;
+  font-weight: bolder;
+  padding-right: 5%;
+  line-height: 2.25em;
+}
+
+#section3 .fadein {
+  animation: fade-in-left 5s infinite alternate;
+}
+
+#section2 .sec1 {
+  display: flex;
+  text-align: center;
+}
+
+#section2 h2 {
+  color: #381919;
+  box-sizing: border-box;
+  margin-right: 4em;
+  padding-right: 5%;
+  padding-left: 3%;
+  padding-bottom: 5%;
+  font-size: 2rem;
+  display: block;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  line-height: 1.5em;
+}
+
+#section2 p {
+  text-align: justify;
+  margin-top: 2em;
+  color: black;
+  font-weight: bolder;
+  padding-right: 5%;
+  line-height: 2.25em;
+}
+
+#section2 .fadein {
+  animation: fade-in-left 5s infinite alternate;
+}
+
+
+#section3 .sec1 {
+  display: flex;
+  text-align: center;
+}
+
+#section3 h2 {
+  color: #381919;
+  box-sizing: border-box;
+  margin-right: 4em;
+  padding-right: 2%;
+  padding-left: 3%;
+  padding-bottom: 5%;
+  font-size: 2rem;
+  display: block;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  line-height: 1.5em;
+  width: 36%;
+}
+
+#section3 p {
+  text-align: justify;
+  margin-top: 2em;
+  color: black;
+  font-weight: bolder;
+  padding-right: 5%;
+  line-height: 2.25em;
+}
+
+#section3 .fadein {
+  animation: fade-in-left 5s infinite alternate;
+}
+
+
+
+.wrapperer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.fixban {
+  background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.financialexpress.com%2Fopinion%2Fcaring-for-the-elderly-more-facilities-needed-rope-in-institutions-like-places-of-worship%2F2300432%2F&psig=AOvVaw0jkGi3z1mMAWVsTM24jVtV&ust=1706819152015000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCICpt5C7iIQDFQAAAAAdAAAAABAE");
+  background-size: cover;
+  background-position: center center;
+  top: 100px;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+}
+
+.fixban:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*display: block;*/
+  width: 100%;
+  height: 100%;
+  background-color: peachpuff;
+  opacity: -7;
+  z-index: -1;
+}
+
+.fixban h2 {
+  padding-top: 8%;
+  font-size: 80px;
+  color: #000;
+}
+
+.contarea {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #b06d6d;
+  top: 600px;
+}
+
+.contarea h2 {
+  font-size: 40px;
+  margin: 0;
+  padding-top: 30px;
+  letter-spacing: 4px;
+}
+
+.contarea p {
+  padding: 2% 0;
+  line-height: 35px;
+  text-align: justify;
+
+}
+
+#page-header {
+  background-image: url("img/involved/Inbanner.png");
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 14px;
+}
+
+#page-header h2 {
+  font-weight: bold;
+  color: rgba(160, 76, 27, 0.952);
+  text-align: center;
+}
+
+.title {
+  font-family: sans-serif;
+  color: #dc2d5e;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+  /*to remove scrollbar*/
+}
+
+.container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+}
+
+.image {
+  display: block;
+  width: 200px;
+  height: 200px;
+}
+
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  font-family: sans-serif;
+} 
+
+.overlayFade {
+  height: 110%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: peachpuff;
+  overflow: scroll;
+}
+
+.overlayFade h3 {
+  color: red;
+  position: absolute;
+  text-align: justify;
+}
+
+.overlayFade h4 {
+  text-align: justify;
+  color: black;
+  font-size: smaller;
+  width: 20%;
+}
+
+.overlay {
+  position: absolute;
+  opacity: 0;
+  transition: all .3s ease;
+  background-color: #f9e7d7;
+}
+
+.container:hover .overlay,
+.container:hover .overlayFade {
+  opacity: 0.85;
+}
+
+.overlayLeft {
+  height: 100%;
+  width: 0;
+  top: 0;
+  left: 0;
+  background-color: peachpuff;
+  padding-right: 10%;
+  padding-bottom: 10%;
+  margin-right: 5em;
+}
+
+.overlayRight {
+  height: 100%;
+  width: 0;
+  top: 0;
+  right: 0;
+  background-color: peachpuff;
+}
+
+.container:hover .overlayLeft,
+.container:hover .overlayRight {
+  width: 100%;
+}
+
+.overlayTop {
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  background-color: #d63c58;
+}
+
+.overlayBottom {
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #941e33;
+}
+
+.container:hover .overlayTop,
+.container:hover .overlayBottom {
+  height: 100%;
+}
+
+.overlayCross {
+  width: 0%;
+  height: 0;
+  top: 0;
+  left: 0;
+  background-color: #e47a52;
+}
+
+.container:hover .overlayCross {
+  height: 100%;
+  width: 100%;
+}
+
+.partners img {
+  width: 14%;
+  height: 150px;
+}
+
+.partners img:hover {
+  box-shadow: 5px 5px 5px #d7d5d5;
+  cursor: pointer;
+}
+
+/*contribute boxes thingy*/
+.image1 {
+  display: cover;
+  position: relative;
+  width: 100%;
+}
+
+.image1__img {
+  display: block;
+  width: 108%;
+  height: 378px;
+
+}
+
+.image1__overlay {
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 108%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  font-family: 'Barlow', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.image1__overlay:hover {
+  opacity: 1;
+}
+
+.image1__overlay>* {
+  transform: translateY(20px);
+  transition: transform 0.25s;
+}
+
+.image1__overlay:hover>* {
+  transform: translateY(0);
+}
+
+.image1__title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.image1__description {
+  color: #fff;
+  font-size: 1.25em;
+  margin-top: 0.25em;
+}
+
+button.normal {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 30px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+}
+
+.maincontainer {
+  padding: 30px;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.maincontainer p {
+  margin-bottom: 15px;
+
+}
+
+.thumbnail {
+  width: 450px;
+  position: relative;
+  /*box-shadow: 0 0 5px rgba(0, 0, 0, .4);*/
+  background-color: #fff;
+  overflow: hidden;
+ /* border-radius: 8px;*/
+  margin-bottom: 10px;
+}
+
+.thumbanail:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ /* border: 8px solid #fff;*/
+  z-index: 2;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.thumbanail img {
+  width: 100%;
+  height: auto;
+  transform: scale(1) rotate(0deg);
+  transition: all .5s linear;
+}
+
+.thumbanail:hover img {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.thumbanail.right {
+  float: right;
+  margin-left: 20px;
+}
+
+.thumbanail.left {
+  float: left;
+  margin-right: 20px;
+}
+
+@media screen and (max-width:767px) {
+
+  .thumbanail.right {
+    float: none;
+    margin-left: 0px;
+  }
+
+  .thumbanail.left {
+    float: none;
+    margin-right: 0px;
+  }
+
+  .thumbanail {
+    width: 100%;
+  }
+}
