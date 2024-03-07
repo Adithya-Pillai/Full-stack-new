@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Indian Bracelets</title>
+  <link href="/spro.css" rel="stylesheet" type="text/css" />
+  <link href="/hf.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!--ANIMATE.css-->
+</head>
+
+<body style="background-color: #ffff; width: 100%;">
+  <section id="header">
+    <a href="/"><img src="img/home/logo-brown-nobg.png" height=80 width=115 ></a>
+    <div>
+     <ul id="navbar">
+       <li><a  href="/">Home</a></li>
+       <li><a class="active" href="/projects">Their Projects</a></li>
+       <li><a href="/getinvolved">Get Involved</a></li>
+       <li><a href="/ourworks">Our Works</a></li>
+       <li><a href="/aboutus">About Us</a></li>
+     </ul>
+   </div>
+  </section>
+  
+<section id="prodetails" class="section-p1">
+  <div class="single-pro-image">
+    <img src="img/project/barce/brace1.jpg" width="100%" id="MainImg">
+    <div class="small-img-group">
+      <div class="small-img-col">
+        <img src="img/project/barce/brace1.jpg" width="100%" height="80%" class="small-img">
+      </div>
+      <div class="small-img-col">
+        <img src="img/project/barce/Brace11.jpg" width="100%" height="80%" class="small-img">
+      </div>
+      <div class="small-img-col">
+        <img src="img/project/barce/brace3.jpg" width="100%" height="80%" class="small-img">
+      </div>
+      <div class="small-img-col">
+        <img src="img/project/barce/brace4.jpg" width="100%" height="80%" class="small-img">
+      </div>
+    </div>
+  </div>
+
+  <div class="single-pro-details">
+    <h6>Handcrafted</h6>
+    <h4>Indian Bracelets</h4>
+    <h2>$price</h2>
+    <!--<select>
+      <option>Select size</option>
+      <option>Small</option>
+      <option>Medium</option>
+      <option>Large</option>
+      <option>Custom</option>
+    </select>-->
+    <input type="number" value="1" min="0">
+    <button class="normal">Add To Cart</button>
+    <h4>Product Details</h4>
+    <span>Each bracelet is meticulously crafted with love and dedication, embodying the spirit of solidarity and support for our mission. Every bead, woven thread, and charm tells a story of empowerment and change.<br>Each purchase funds our initiatives aimed at improving the well-being of disabled and elderly individuals. Wear the beauty of kindness on your wrist and join us in creating a world where every bracelet carries the weight of positive impact.</span>
+  </div>
+</section>
+  <section class="person">
+    <img src="img/project/barce/person7.jpg">
+    <p class="person-details">
+      Parvati, an elderly artisan whose passion for crafting Indian beaded bracelets knows no bounds. Despite the challenges posed by age, Parvati's dedication to her artistry remains unwavering. With each delicate bead she strings and every intricate pattern she weaves, Parvati not only creates exquisite jewelry but also fosters a sense of unity and tradition within our community. Through her skilled hands, she preserves the essence of Indian craftsmanship, ensuring that the vibrant tapestry of our cultural heritage continues to thrive for generations to come.
+    </p>
+  </section>
+  
+  <script>
+    var MainImg = document.getElementById("MainImg");
+    var smallimg = document.getElementsByClassName("small-img");
+
+    smallimg[0].onclick = function () {
+      MainImg.src = smallimg[0].src;
+    }
+    smallimg[1].onclick = function () {
+      MainImg.src = smallimg[1].src;
+    }
+    smallimg[2].onclick = function () {
+      MainImg.src = smallimg[2].src;
+    }
+    smallimg[3].onclick = function () {
+      MainImg.src = smallimg[3].src;
+    }
+  </script>
+    <!--Newsletter-->
+    <%- include("./partials/newsletter.ejs") %>
+
+      <!--Footter-->
+      <%- include("./partials/footer.ejs") %>
+
+
+
+
+        <script type="module" src="script.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>

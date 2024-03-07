@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Pottery</title>
+  <link href="spro.css" rel="stylesheet" type="text/css" />
+  <link href="hf.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!--ANIMATE.css-->
+</head>
+
+<body style="background-color: #ffff; width: 100%;">
+  <section id="header">
+    <a href="/"><img src="img/home/logo-brown-nobg.png" height=80 width=115 ></a>
+    <div>
+     <ul id="navbar">
+       <li><a  href="/">Home</a></li>
+       <li><a class="active" href="/projects">Their Projects</a></li>
+       <li><a href="/getinvolved">Get Involved</a></li>
+       <li><a href="/ourworks">Our Works</a></li>
+       <li><a href="/aboutus">About Us</a></li>
+     </ul>
+   </div>
+  </section>
+  <section id="prodetails" class="section-p1">
+  <div class="single-pro-image">
+    <img src="img/project/pot/pot2.jpg" width="100%" id="MainImg">
+    <div class="small-img-group">
+      <div class="small-img-col">
+        <img src="img/project/pot/pot2.jpg" width="100%" height="80%" class="small-img">
+      </div>
+      <div class="small-img-col">
+        <img src="img/project/pot/pot5.jpg" width="100%" height="80%" class="small-img">
+      </div>
+      <div class="small-img-col">
+        <img src="img/project/pot/pot3.jpg" width="100%" height="80%" class="small-img">
+      </div>
+      <div class="small-img-col">
+        <img src="img/project/pot/pot11.jpg" width="100%" height="80%" class="small-img">
+      </div>
+    </div>
+  </div>
+
+  <div class="single-pro-details">
+    <h6>Handcrafted</h6>
+    <h4>Pottery</h4>
+    <h2>$price</h2>
+    <!--<select>
+      <option>Select size</option>
+      <option>Small</option>
+      <option>Medium</option>
+      <option>Large</option>
+      <option>Custom</option>
+    </select>-->
+    <input type="number" value="1" min="0">
+    <button class="normal">Add To Cart</button>
+    <h4>Product Details</h4>
+    <span>
+      Handcrafted pottery is an art form that transcends utility, embodying the spirit of creativity and cultural expression. At our NGO, we celebrate the rich tradition of handcrafted pottery as more than just a skill; it's a means of empowerment for the artisans involved.<br>Each piece tells a unique story, showcasing the dedication and craftsmanship of individuals who have honed their talents over generations. By promoting handcrafted pottery, we not only preserve cultural heritage but also provide sustainable livelihoods for skilled artisans, fostering a sense of community and preserving a valuable tradition for future generations.</span>
+  </div>
+</section>
+  <section class="person">
+    <img src="img/project/pot/person1.jpg">
+    <p class="person-details">
+      Meet Takur saheeb, a seasoned artisan whose love for pottery knows no bounds. With hands weathered by time but skill honed to perfection, he breathes life into clay, shaping each vessel with care and precision. With each turn of the wheel and gentle caress of clay, he transports himself to a realm where time stands still, and artistry reigns supreme. For him, pottery isn't just an art; it's a testament to resilience and passion. Every stroke of his hand tells a story, weaving together memories of a lifetime. In his small studio, surrounded by shelves adorned with his creations, he finds solace and purpose, a testament to the enduring power of creativity and craftsmanship.
+    </p>
+  </section>
+  <script>
+    var MainImg = document.getElementById("MainImg");
+    var smallimg = document.getElementsByClassName("small-img");
+
+    smallimg[0].onclick = function () {
+      MainImg.src = smallimg[0].src;
+    }
+    smallimg[1].onclick = function () {
+      MainImg.src = smallimg[1].src;
+    }
+    smallimg[2].onclick = function () {
+      MainImg.src = smallimg[2].src;
+    }
+    smallimg[3].onclick = function () {
+      MainImg.src = smallimg[3].src;
+    }
+  </script>
+  <!--Newsletter-->
+      <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+          <h4>Sign Up For Newsletters</h4>
+          <p>Get E-mail updates about our latest <span>campaigns and works.</span></p>
+        </div>
+        <div class="form">
+          <input type="text" placeholder="Your email address">
+          <button class="normal">Sign Up</button>
+      </section>
+  <!--Newsletter-->
+  <%- include("./partials/newsletter.ejs") %>
+
+      <!--Footter-->
+      <%- include("./partials/footer.ejs") %>
+
+
+
+
+
+    <script type="module" src="script.js"></script>
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+  </body>
+
+  </html>

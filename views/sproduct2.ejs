@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Scarf</title>
+  <link href="spro.css" rel="stylesheet" type="text/css" />
+  <link href="hf.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!--ANIMATE.css-->
+</head>
+
+<body style="background-color: #ffff; width: 100%;">
+  <section id="header">
+    <a href="/"><img src="img/home/logo-brown-nobg.png" height=80 width=115 ></a>
+    <div>
+     <ul id="navbar">
+       <li><a  href="/">Home</a></li>
+       <li><a class="active" href="/projects">Their Projects</a></li>
+       <li><a href="/getinvolved">Get Involved</a></li>
+       <li><a href="/ourworks">Our Works</a></li>
+       <li><a href="/aboutus">About Us</a></li>
+     </ul>
+   </div>
+  </section>
+  
+<section id="prodetails" class="section-p1">
+  <div class="single-pro-image">
+    <img src="img/project/scarf/scarf1.jpg" width="100%" id="MainImg">
+    <div class="small-img-group">
+      <div class="small-img-col">
+        <img src="img/project/scarf/scarf1.jpg" width="100%" height="80%" class="small-img">
+      </div>
+      <div class="small-img-col">
+        <img src="img/project/scarf/scarf2.1.jpg" width="100%" height="80%" class="small-img">
+      </div>
+      <div class="small-img-col">
+        <img src="img/project/scarf/scarf3.jpg" width="100%" height="80%" class="small-img">
+      </div>
+      <div class="small-img-col">
+        <img src="img/project/scarf/scarf4.2.jpg" width="100%" height="80%" class="small-img">
+      </div>
+    </div>
+  </div>
+
+  <div class="single-pro-details">
+    <h6>Handcrafted</h6>
+    <h4>Scarf</h4>
+    <h2>$price</h2>
+    <!--<select>
+      <option>Select size</option>
+      <option>Small</option>
+      <option>Medium</option>
+      <option>Large</option>
+      <option>Custom</option>
+    </select>-->
+    <input type="number" value="1" min="0">
+    <button class="normal">Add To Cart</button>
+    <h4>Product Details</h4>
+    <span>
+      Embrace the warmth of compassion and style with our handcrafted scarves. Each scarf is a unique masterpiece, meticulously crafted by skilled artisans who pour their creativity and dedication into every stitch.<br>By adorning yourself with these exquisite scarves, you not only elevate your fashion sense but also contribute to a cause.Wrap yourself in the artistry of our handcrafted scarves and join us in making a meaningful impact on the journey towards a more compassionate world.</span>
+  </div>
+</section>
+  <section class="person">
+    <img src="img/project/scarf/person4.jpg">
+    <p class="person-details">
+    From the heart of rural India, resides Amrita, a venerable woman whose nimble fingers dance with threads of tradition. With a weathered loom as her companion, she weaves intricate scarves, each strand telling a story of resilience and heritage. Guided by the whispers of her ancestors, Amrita's hands move with a rhythmic grace, blending colors and patterns passed down through generations. As the loom sings its ancient melody, Amrita's spirit soars, infusing each scarf with the warmth of her love and the wisdom of her years. Through her craft, she not only creates garments but also preserves the rich tapestry of Indian culture, reminding us of the beauty found in age-old traditions and the timeless artistry of the human touch.
+    </p>
+  </section>
+  <script>
+    var MainImg = document.getElementById("MainImg");
+    var smallimg = document.getElementsByClassName("small-img");
+
+    smallimg[0].onclick = function () {
+      MainImg.src = smallimg[0].src;
+    }
+    smallimg[1].onclick = function () {
+      MainImg.src = smallimg[1].src;
+    }
+    smallimg[2].onclick = function () {
+      MainImg.src = smallimg[2].src;
+    }
+    smallimg[3].onclick = function () {
+      MainImg.src = smallimg[3].src;
+    }
+  </script>
+  <!--Newsletter-->
+      <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+          <h4>Sign Up For Newsletters</h4>
+          <p>Get E-mail updates about our latest <span>campaigns and works.</span></p>
+        </div>
+        <div class="form">
+          <input type="text" placeholder="Your email address">
+          <button class="normal">Sign Up</button>
+      </section>
+
+      <!--Footter-->
+      <footer class="section-p1">
+        <div class="col">
+          <img class="logo" src="img/home/logo-brown-nobg.png" height="70" width="90">
+          <h4>Contact</h4>
+          <p><strong>Adress:</strong></p>
+          <p><strong>Phone:</strong> (+91) 0000000000 </p>
+          <p><strong>Hours:</strong>09:00 - 18:00, All days of the week</p>
+          <div class="follow">
+            <h4>Follow Us</h4>
+            <div class="icon">
+              <i class="fab fa-facebook"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-pinterest-p"></i>
+              <i class="fab fa-youtube"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <h4>About</h4>
+          <a href="about.html">About us</a>
+          <a href="#">Delivery Information</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Feedback</a>
+          <a href="about.html">Contact Us</a>
+        </div>
+        <div class="col">
+          <h4>My Account</h4>
+          <a href="index.html">Sign In</a>
+          <a href="#">View Cart</a>
+          <a href="#">My Wishlist</a>
+          <!--<a href="#">Track My Donation</a>-->
+          <a href="#">Help</a>
+        </div>
+        <div class="col install">
+          <h4>Install App</h4>
+          <p>From App Store or Google Play</p>
+          <div class="row">
+            <img src="img/app.jpg">
+            <img src="img/play.jpg">
+          </div>
+          <p>Secured Payments Gateways</p>
+          <img src="img/pay.png">
+        </div>
+        <div class="copyright">
+          <p>© 2024, Hands Of Hope</p>
+        </div>
+      </footer>
+      </section>
+    </section>
+
+
+
+
+
+    <script type="module" src="script.js"></script>
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+  </body>
+
+  </html>

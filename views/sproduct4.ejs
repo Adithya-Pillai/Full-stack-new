@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Our Works</title>
+    <link  rel="stylesheet" href="/spro.css" type="text/css" />
+    <link  rel="stylesheet" href="/hf.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--ANIMATE.css-->
+  </head>
+
+  <body style="background-color: #ffff; width: 100%;">
+    <section id="header">
+      <a href="/"><img src="img/home/logo-brown-nobg.png" height=80 width=115 ></a>
+      <div>
+       <ul id="navbar">
+         <li><a  href="/">Home</a></li>
+         <li><a class="active" href="/projects">Their Projects</a></li>
+         <li><a href="/getinvolved">Get Involved</a></li>
+         <li><a href="/ourworks">Our Works</a></li>
+         <li><a href="/aboutus">About Us</a></li>
+       </ul>
+     </div>
+    </section>
+<section id="prodetails" class="section-p1">
+  <div class="single-pro-image">
+    <img src="img/project/paint/paint1.jpg" width="100%" id="MainImg">
+    <div class="small-img-group">
+      <div class="small-img-col">
+        <img src="img/project/paint/paint1.jpg" width="100%" height="80%" class="small-img">
+      </div>
+      <div class="small-img-col">
+        <img src="img/project/paint/paint2.jpg" width="100%" height="80%" class="small-img">
+      </div>
+      <div class="small-img-col">
+        <img src="img/project/paint/paint3.jpg" width="100%" height="80%" class="small-img">
+      </div>
+      <div class="small-img-col">
+        <img src="img/project/paint/paint4.jpg" width="100%" height="80%" class="small-img">
+      </div>
+    </div>
+  </div>
+
+  <div class="single-pro-details">
+    <h6>Handcrafted/ Customisable</h6>
+    <h4>Paintings</h4>
+    <h2>$price</h2>
+    <!--<select>
+      <option>Select size</option>
+      <option>Small</option>
+      <option>Medium</option>
+      <option>Large</option>
+      <option>Custom</option>
+    </select>-->
+    <input type="number" value="1" min="0">
+    <button class="normal">Add To Cart</button>
+    <h4>Product Details</h4>
+    <span>Elevate your space with our handcrafted and customizable paintings, meticulously created with passion and purpose. Our NGO offers a unique collection of paintings that can be tailored to your individual preferences, bringing a touch of personalized artistry to your surroundings.<br>Whether you're looking to adorn your office, home, or a special event venue, our handcrafted paintings serve as a symbol of creativity and support for a noble cause. By choosing our customizable paintings, you not only enhance your environment with bespoke art but also contribute to our mission of making a positive impact on the lives of disabled and elderly individuals.
+    </span>
+  </div>
+</section>
+      <section class="person">
+        <img src="img/project/paint/person2.jpg">
+        <p class="person-details">
+          Meet Emily, a determined young woman with a visual impairment who defies all odds by expressing her creativity through painting. Despite facing challenges in her daily life, Emily's passion for art knows no bounds. With her keen sense of touch and unwavering determination, she meticulously applies vibrant colors to canvas, creating mesmerizing paintings that capture the beauty of the world around her. Through her artwork, Emily not only showcases her talent but also inspires others to embrace their own abilities and see the world through a different lens.
+        </p>
+      </section>
+  <script>
+    var MainImg = document.getElementById("MainImg");
+    var smallimg = document.getElementsByClassName("small-img");
+
+    smallimg[0].onclick = function () {
+      MainImg.src = smallimg[0].src;
+    }
+    smallimg[1].onclick = function () {
+      MainImg.src = smallimg[1].src;
+    }
+    smallimg[2].onclick = function () {
+      MainImg.src = smallimg[2].src;
+    }
+    smallimg[3].onclick = function () {
+      MainImg.src = smallimg[3].src;
+    }
+  </script>
+  <!--Newsletter-->
+  <%- include("./partials/newsletter.ejs") %>
+
+      <!--Footter-->
+      <%- include("./partials/footer.ejs") %>
+
+
+
+
+
+    <script type="module" src="script.js"></script>
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+  </body>
+
+  </html>

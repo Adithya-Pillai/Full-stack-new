@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<%- include("./partials/head.ejs") %>
+
+  <body style="background-color: #efe4e1; width: 100%;">
+    <%- include("./partials/nav.ejs") %>
+    <section id="hero1" class="d-flex justify-content-center align-items-center">
+      <div id="heroCarosuel" class="container carosuel carosuel-fade" data-ride="carosuel">
+      </div>
+    </section>
+    
+      <!--SLIDE 1-->
+  <div id="hero" style="background-attachment: fixed; width: 100%;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-image: url(img/home/banner1.avif);" class="animate__animated animate__pulse">
+    <h2 style="color: white; padding-top:20px ;" class="animate__animated animate__fadeIn">Champions of benevolence, architects of enduring impact.</h2>
+
+    <p style="color: white;" class="animate__animated animate__fadeIn">Welcome to a sanctuary of compassion and change, where every click brings us closer to a better world.</p>
+  </div>
+  <div class="gallery" style="text-align: center; margin-left: auto; margin-right: auto; padding-top: 40px;">
+    <div>
+      <span><a href="ourwork.html"><img src="img/home/flow/community.png"></a></span>
+    <span><a href="getinvolved.html"><img src="img/home/flow/fund.png"></a></span></div>
+    <div><span><a href="project.html"><img src="img/home/flow/hope.png"></a></span>
+    <span><a href="ourworks.html"><img src="img/home/flow/health123.png"></a></span>
+    </div>
+  </div>
+  <section style="text-align: center; padding-bottom: 20px;">
+      <h1 class="animate__animated animate__zoomIn animate__delay-2s" style="font-family: 'E A Garamond'; font-weight: normal;">Our Mission</h1>
+    <p style="padding: 0px 20px 20px; font-family: 'E A Garamond';" class="animate__animated animate__zoomIn animate__delay-2s">
+      At Hands of Hope, our unwavering commitment is to extend compassion and support to individuals and families navigating the challenging aftermath of disasters. We strive to create a world where everyone, regardless of their background or circumstances, not only survives but thrives in an environment of understanding and care. Rooted in empathy, we firmly believe that every person possesses the innate capacity to make a meaningful and positive impact on the lives of others. Together, let's build a future where empathy is the cornerstone of resilience and recovery.</p>
+      <p style="padding: 0px 20px 20px; font-family: 'E A Garamond';" class="animate__animated animate__zoomIn animate__delay-2s">Our initiatives span a spectrum of essential areas, including education, healthcare, and social support, tailored to meet the unique needs of each demographic. Our NGO envisions a future where every child, elderly person, and differently-abled individual not only receives immediate assistance but also experiences sustained support, enabling them to lead fulfilling lives.</p>
+      <a href="/aboutus" style="text-decoration: none; color= #fff;"><button class="normal" id="read">Read More</button></a>
+  </section>
+    
+  <section>
+    <div class="counter-section" style="display: flex; justify-content: center; align-items: center;">
+      <div class="overlay"></div>
+  </section>
+     
+    
+
+  <div class="wrapper" style="padding-top: 40px;">
+    <h2 data-aos="fade-up" style="text-align: center; padding: 5px;">Our Focus Goals</h2>
+    <ul>
+      <li>
+    <div data-aos="fade-right" style="padding: 10px;" class="image">
+        <img src="img/home/goals/Crea1.png" class="goal_img">
+        <div class="content">
+          <h1>Creative freedom </h1>
+          <p>We provide workshops and training sessions to hone their skills, offer opportunities for them to exhibit their work at local markets and events, and host an online platform where their creations are showcased and sold. We work toward enabling these talented individuals to share their unique perspectives with the world and earn a livelihood with dignity. </p>
+        </div>
+    </div>
+      </li>
+      <li>
+        <div data-aos="fade-left" style="padding: 10px;" class="image">
+            <img src="img/home/goals/tech.png" class="goal_img">
+            <div class="content">
+              <h1>Digital Bridging</h1>
+              <p> Promoting digital literacy among elderly and differently abled individuals to bridge the digital divide and enable them to participate fully in the digital age. This includes providing training in basic computer skills, internet usage, and assistive technologies tailored to their specific needs. We foster digital inclusion, empowering individuals for connectivity and engagement.</p>
+            </div>
+        </div>
+        </li>
+      <li>
+        <div data-aos="fade-right" style="padding: 10px;" class="image">
+        <img src="img/home/goals/social.png" class="goal_img">
+        <div class="content">
+          <h1>Social inclusion</h1>
+          <p>Through targeted programs, advocacy efforts, and community initiatives, we strive to break down barriers and create a society where everyone feels valued and respected. By promoting diversity, equity, and accessibility, we aim to build bridges between people of all backgrounds. Together, we can create a more inclusive and compassionate world for everyone.</p>
+        </div>
+    </div>
+      </li>
+      <li>
+        <div data-aos="fade-left" style="padding: 10px;" class="image">
+        <img src="img/home/goals/memory.png" class="goal_img">
+        <div class="content">
+          <h1>Legacy</h1>
+          <p>Launching initiatives to collect and document the life stories, memories, and cultural heritage of elderly and differently abled people through multimedia formats such as oral history recordings, photography exhibitions, and digital storytelling, preserving their legacies for future generations and fostering a sense of identity, pride, and belonging.</p>
+        </div>
+    </div>
+      </li>
+    </ul>
+  </div>
+      
+    <script> /*--for scrolling*/
+      let scrollContainer = document.querySelector(".gallery");
+      scrollContainer.addEventListner("wheel", (evt) => {
+        evt.preventDefault();
+        scrollContainer.scrollLeftpixels += evt.deltaY;
+      });
+    </script>
+
+
+
+        <%- include("./partials/newsletter.ejs") %>
+          <%- include("./partials/footer.ejs") %>
+
+
+
+
+            <script type="module" src="script.js"></script>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+            <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+  </body>
+
+</html>
