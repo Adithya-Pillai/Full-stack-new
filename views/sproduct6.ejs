@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Our Works</title>
+    <link  rel="stylesheet" href="/spro.css" type="text/css" />
+    <link  rel="stylesheet" href="/hf.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--ANIMATE.css-->
+  </head>
+
+<body style="background-color: #ffff; width: 100%;">
+  <section id="header">
+    <a href="/"><img src="/img/home/logo-brown-nobg.png" height=80 width=115 ></a>
+   <div>
+     <ul id="navbar">
+       <li><a href="/">Home</a></li>
+       <li><a class="active" href="/projects">Their Projects</a></li>
+       <li><a href="/getinvolved">Get Involved</a></li>
+       <li><a href="/ourworks">Our Works</a></li>
+       <li><a href="/aboutus">About Us</a></li>
+       <li><div class="icon-cart">
+           <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+           </svg>
+           <span><%= cart.length %></span>
+       </div></li>
+    </ul>
+   </div>
+ </section>
+
+  <div class="cartTab">
+    <h1 style="color: black; padding: 20px;">Shopping Cart</h1>
+    <div class="listCart" style="padding-top:20px; color:black;">
+      <table class="table">
+        <tr>
+          <th>Item Name</th>
+          <th>Quantity</th>
+          <th>Unit Price</th>
+          <th>Total Price</th>
+          <th>Remove</th>
+        </tr>
+        <% 
+        if(cart.length>0)
+        {
+          let total = 0;
+          cart.forEach(item => {%>
+              <tr>
+                <td><%= item.Name %></td>
+                <td><%= item.quantity %></td>
+                <td><%= item.Price %></td>
+                <td><%= parseFloat(item.quantity) * parseFloat(item.Price) %></td>
+                <td><button type="button" class="addCart" onclick="remove_item('<%= item.Id %>','<%= item.Name %>','<%= item.Price %>','<%= result.Link %>','<%= result.Id %>')">Remove</button></td>
+              </tr>
+            <% 
+              total += parseFloat(item.quantity) * parseFloat(item.Price);
+          })
+          %>
+          <tr>
+            <td colspan="3" halign="right"><b>Total</b></td>
+            <td><%= total %></td>
+            <td>&nbsp;</td>
+          </tr>
+          <%
+        }else{
+          %>
+            <tr>
+              <td colspan="5" halign="center">No item found in Cart</td>
+            </tr>
+          <%
+        }
+        %>
+      </table>
+    </div>
+    <div class="btn">
+        <button class="close">CLOSE</button>
+          <button class="checkOut">Check Out</button>
+    </div>
+</div>
+<script>
+  let iconCart = document.querySelector('.icon-cart');
+  let body = document.querySelector('body');
+  let closeCart = document.querySelector('.close');
+
+  // open and close tab
+  iconCart.addEventListener('click', () => {
+      body.classList.toggle('activeTabCart');
+  })
+  closeCart.addEventListener('click', () => {
+      body.classList.toggle('activeTabCart');
+  })
+  function remove_item(Id,Name,Price,Link,LinkId)
+    {
+        if(confirm("Are you sure you want to remove it?"))
+        {
+            window.location.href = `/remove_itemp?Id=${Id}&Name=${Name}&Price=${Price}&Link=${Link}&LinkId=${LinkId}`;
+        }
+    }</script>
+      <section id="prodetails" class="section-p1">
+        <div class="single-pro-image">
+          <img src="/img/project/tote/tote6.1.jpg" width="100%" id="MainImg">
+          <div class="small-img-group">
+            <div class="small-img-col">
+              <img src="/img/project/tote/tote6.1.jpg" width="100%" height="80%" class="small-img">
+            </div>
+            <div class="small-img-col">
+              <img src="/img/project/tote/tote4.jpg" width="100%" height="80%" class="small-img">
+            </div>
+            <div class="small-img-col">
+              <img src="/img/project/tote/tote5.jpg" width="100%" height="80%" class="small-img">
+            </div>
+            <div class="small-img-col">
+              <img src="/img/project/tote/tote7.jpg" width="100%" height="80%" class="small-img">
+            </div>
+          </div>
+        </div>
+    
+      <div class="single-pro-details">
+        <h6>Handcrafted</h6>
+        <h2><%= result.Name %></h4>
+        <h4>Rs.<%= result.Price %></h2>
+        <h6>In stock:<%= result.NumberOf %></h6>
+        <form method="post" action="/add_cartp">
+          <input type="number" value="1" min="0" max=<%= result.NumberOf %> name="item_count">
+          <input type="hidden" name="Id" value=<%= result.Id %>>
+          <input type="hidden" name="Name" value=<%= result.Name %>>
+          <input type="hidden" name="Price" value="<%= result.Price %>">
+          <input type="hidden" name="Link" value=<%= result.Link %>>
+          <input type="submit" style="width: 200px;" class="addCart" value="Add to Cart">
+      </form>
+        <h4>Product Details</h4>
+        <span><%= result.Description %></span>
+      </div>
+    </section>
+      <section class="person" style="display: flex;">
+        <div>
+          <img src="/img/project/tote/person8.jpeg"></div>
+          <div><p class="person-details">
+            Maya, a woman of remarkable resilience and creativity, despite her battle with Muscular Dystrophy. Undeterred by the physical challenges she faces, Maya pours her soul onto canvas tote bags, transforming them into vibrant works of art. Each stroke of her brush is a testament to her indomitable spirit, radiating joy and inspiration to all who behold her creations. Through her artistry, Maya not only expresses herself but also empowers others to embrace their own unique abilities.
+        </p></div>
+      </section>
+      <script>
+        var MainImg = document.getElementById("MainImg");
+        var smallimg = document.getElementsByClassName("small-img");
+    
+        smallimg[0].onclick = function () {
+          MainImg.src = smallimg[0].src;
+        }
+        smallimg[1].onclick = function () {
+          MainImg.src = smallimg[1].src;
+        }
+        smallimg[2].onclick = function () {
+          MainImg.src = smallimg[2].src;
+        }
+        smallimg[3].onclick = function () {
+          MainImg.src = smallimg[3].src;
+        }
+      </script>
+  <!--Newsletter-->
+  <%- include("./partials/newsletter.ejs") %>
+
+      <!--Footter-->
+      <%- include("./partials/footer.ejs") %>
+
+
+
+
+
+    <script type="module" src="script.js"></script>
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  </body>
+
+  </html>

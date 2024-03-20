@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Their Projects</title>
+  <link href="/styles.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+
+  <body>
+    <section id="header">
+      <a href="/"><img src="img/home/logo-brown-nobg.png" height=80 width=115 ></a>
+     <div>
+       <ul id="navbar">
+         <li><a href="/">Home</a></li>
+         <li><a class="active" href="/projects">Their Projects</a></li>
+         <li><a href="/getinvolved">Get Involved</a></li>
+         <li><a href="/ourworks">Our Works</a></li>
+         <li><a href="/aboutus">About Us</a></li>
+         <li><div class="icon-cart">
+             <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+             </svg>
+             <span><%= cart.length %></span>
+         </div></li>
+      </ul>
+     </div>
+   </section>
+
+     <div class="cartTab">
+      <h1 style="color: rgb(172, 110, 81); padding: 20px; font-family: 'E B garamond'; text-align: center;">Shopping Cart</h1>
+      <div class="listCart" style="padding-top:20px; text-align: left; color:black; font-family: 'E B garamond';">
+        <table class="table" style="border-collapse:collapse;">
+          <tr>
+            <th>Item Name</th>
+            <th>Quantity</th>
+            <th>Unit Price</th>
+            <th>Total Price</th>
+            <th>Remove</th>
+          </tr>
+          <% 
+          if(cart.length>0)
+          {
+            let total = 0;
+            cart.forEach(item => {%>
+                <tr>
+                  <td><%= item.Name %></td>
+                  <td><%= item.quantity %></td>
+                  <td><%= item.Price %></td>
+                  <td><%= parseFloat(item.quantity) * parseFloat(item.Price) %></td>
+                  <td><button type="button" class="addCart" onclick="remove_item('<%= item.Id %>','<%= item.Name %>','<%= item.Price %>')">Remove</button></td>
+                </tr>
+
+              <% 
+                total += parseFloat(item.quantity) * parseFloat(item.Price);
+            })
+            %>
+            <tr>
+              <td colspan="3" halign="right"><b>Total</b></td>
+              <td><%= total %></td>
+              <td>&nbsp;</td>
+            </tr>
+            <%
+          }else{
+            %>
+              <tr>
+                <td colspan="5" halign="center">No item found in Cart</td>
+              </tr>
+            <%
+          }
+          %>
+        </table><hr>
+      </div>
+      <div class="btn">
+          <button class="close">CLOSE</button>
+            <button class="checkOut">Check Out</button>
+      </div>
+  </div>
+  <script>
+    let iconCart = document.querySelector('.icon-cart');
+    let body = document.querySelector('body');
+    let closeCart = document.querySelector('.close');
+
+    // open and close tab
+    iconCart.addEventListener('click', () => {
+        body.classList.toggle('activeTabCart');
+    })
+    closeCart.addEventListener('click', () => {
+        body.classList.toggle('activeTabCart');
+    })
+    function remove_item(Id,Name,Price)
+      {
+          if(confirm("Are you sure you want to remove it?"))
+          {
+              window.location.href = `/remove_item?Id=${Id}&Name=${Name}&Price=${Price}`;
+          }
+      }
+      </script>
+    
+    <section style="background-image: url(img/project/TryMeBeyonce.png);background-repeat: no-repeat; padding-bottom: 90px;">
+    <h2 style="color: rgb(0, 0, 0); padding-top: 65px;  font-family: 'E A Garamond'; font-weight: bold; text-align: center;" class="animate__animated animate__fadeIn">#MakeADifference</h2>
+    <section id="hero" class="animate__animated animate__pulse">
+  <div id="mission" class="over" style="text-align: center; padding-bottom: 20px; display: flex;">
+    <img src="img/project/OverlayBanner.png">
+  <p style="padding: 45px 20px 20px; text-align: justify; font-family: 'E A Garamond'; font-weight: lighter; color: darkslategrey; ">
+    Discover the heart and soul woven into every stitch and stroke of our handmade products, lovingly crafted by the skilled hands of elderly artisans and individuals with diverse abilities. Each piece reflects a journey of resilience, creativity, and unwavering determination. From cozy knitted shawls to intricately designed ceramics, every creation embodies a testament to the rich tapestry of human experience. By choosing our handmade treasures, you're not only embracing quality craftsmanship but also fostering a community where every individual's talent is celebrated and valued. Join us in empowering these remarkable artisans and enriching lives, one handmade masterpiece at a time.<br>Together, let's weave a future where everyone's story is heard, cherished, and celebrated.</p>
+  </div>
+    </section>
+  </section>
+  <section id="scrolltarget"> <section id="product1" class="section-p1">
+    <div class="pro-container">
+      <% products.forEach(product => {%>
+        <a href="<%= product.Link %>?Id=<%= product.Id %>">
+          <div class="pro">
+            <div class="img-div">
+              <img src="<%= product.Image %>" height="250" alt="">
+            </div>
+            <div class="des">
+              <h5><%= product.Name %></h5>
+              <h4>Rs.<%= product.Price %></h4>
+              <h5>In stock:<%= product.NumberOf %></h4>
+              <form method="post" action="/add_cart">
+                  <input type="hidden" name="Id" value="<%= product.Id %>">
+                  <input type="hidden" name="Name" value="<%= product.Name %>">
+                  <input type="hidden" name="Price" value="<%= product.Price %>">
+                  <input type="hidden" name="NumberOf" value="<%= product.NumberOf %>">
+                  <input type="submit" class="addCart" value="Add to Cart">
+              </form>
+            </div>
+          </div>
+          </a>
+      <% })%>
+    </div>
+  </section></section>
+ 
+      <!--Newsletter-->
+      <%- include("./partials/newsletter.ejs") %>
+
+        <!--Footter-->
+        <%- include("./partials/footer.ejs") %>
+
+          <script type="module" src="script.js"></script>
+  </body>
+
+</html>

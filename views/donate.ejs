@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!--<link href="hf.css" rel="stylesheet">-->
+    <link href="/donate.css" rel="stylesheet">
+    <link href="/hf.css" rel="stylesheet">
+    <title>Donate</title>
+  </head>
+  <body>
+    <section id="header">
+        <a href="#"><img src="img/home/logo-brown-nobg.png" height=80 width=115 ></a>
+       <div>
+         <ul id="navbar">
+           <li><a href="/">Home</a></li>
+           <li><a href="/projects">Their Projects</a></li>
+           <li><a class="active" href="/getinvolved">Get Involved</a></li>
+           <li><a href="/ourworks">Our Works</a></li>
+           <li><a href="/aboutus">About Us</a></li>
+           <li><a href="/donate"><button style="background-color: #e2a7a7; 
+            text-decoration: none; 
+            border-radius: 6px; 
+            border: none; 
+            padding: 5px 22px; padding-top: 2px;
+            font-size: 14px; 
+            font-weight: bold;
+            cursor: pointer;">Donate Now!</button></a></li>
+         </ul>
+       </div>
+      </section>
+    <img src="img/donate/DONATE.png" style="width: 100%; height: 700px" />
+    <div style="display: flex; align-items: center; justify-content: center; height: 100vh; background-color: #f4f4f4;padding-top:50px;padding-top: 50px;">
+        <div style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 100%; max-width: 500px;">
+            <form action="/donate" method="post" style="padding: 20px;">
+                <h2 style="text-align: center; color: #333;">DONATION FORM</h2>
+                <div style="margin-bottom: 20px;">
+                    <label for="fname">Name:</label>
+                    <input type="text" id="fname" name="fname" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email_id" value="<%= result.Email_Id %>" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label for="phone">Phone number:</label>
+                    <input type="text" id="phone" name="phone" value="<%= result.PhoneNo %>" required minlength="10" maxlength="10" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+                <p style="text-align: center;">Type Of Donor</p>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                    <input type="radio" id="Indi" name="donor_type" value="Individual">
+                    <label for="Individual">INDIVIDUAL</label>
+                    <input type="radio" id="Corp" name="donor_type" value="Corporate">
+                    <label for="Corporate">CORPORATE</label>
+                    <input type="radio" id="Inst" name="donor_type" value="Institute">
+                    <label for="Institute">INSTITUTE</label>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label for="address">ADDRESS:</label>
+                    <textarea id="address" name="address" rows="4" cols="50" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label for="amt">Enter Amount To Donate:</label>
+                    <input type="text" id="amt" name="amt" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+                <h3 style="text-align: center;">Payment Methods</h3>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                    <input type="radio" id="card" name="payment_method" value="CREDIT/DEBIT CARD">
+                    <label for="card">CREDIT/DEBIT CARD</label>
+                    <input type="radio" id="UPI" name="payment_method" value="UPI PAYMENT">
+                    <label for="UPI">UPI PAYMENT</label>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <input type="submit" value="Submit" style="width: 100%; padding: 10px; border: none; background-color: #007bff; color: white; cursor: pointer; border-radius: 4px; transition: background-color 0.3s ease;">
+                </div>
+            </form>
+            <script>
+              if("<%= result.Type %>" == "Individual"){
+                document.getElementById("Indi").checked = true;
+              }
+              if("<%= result.Type %>" == "Corporate"){
+                document.getElementById("Corp").checked = true;
+              }
+              if("<%= result.Type %>" == "Institution"){
+                document.getElementById("Inst").checked = true;
+              }
+            </script>
+          
+        </div>
+    </div>
+    <br><br><br>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="img/donate/pic8.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="img/donate/pic11.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="img/donate/pic5.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="img/donate/pic12.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="img/donate/pic4.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="img/donate/pic9.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="img/donate/pic15.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="img/donate/pic16.jpg" />
+      </div>
+    </div>
+    <script src="https://unpkg.com/swiper/js/swiper.in.js"></script>
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          effect: "coverflow",
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: "auto",
+          coverflowEffect: {
+            rotate: 20,
+            stretch: 0,
+            depth: 200,
+            modifier: 1,
+            slideShadows: true,
+          },
+
+          loop: true,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+        });
+      </script>
+      <br><br><br>
+      
+
+       <!--Footter-->
+       <%- include("./partials/footer.ejs") %>
+
+  </body>
+</html>
